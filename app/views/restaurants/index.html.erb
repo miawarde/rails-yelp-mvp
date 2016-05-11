@@ -1,0 +1,28 @@
+<head>
+<style>
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+  }
+
+  li {
+    display: inline-flex;
+  }
+
+  a, h1, h2, h3 {
+    text-decoration: none;
+  }
+</style>
+</head>
+<body class="text-center">
+<h1>Welcome to Le Fooding Paris</h1>
+<% @restaurants.each do |restaurant| %>
+  <h2><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
+  <p><%= restaurant.address %></p>
+  <p><%= restaurant.phone_number %></p>
+  <p><%= restaurant.category %></p>
+<% end %>
+</body>
+
+
